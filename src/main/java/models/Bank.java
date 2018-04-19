@@ -17,6 +17,15 @@ public class Bank implements BankBase {
      */
     private Account account1;
     private Account account2;
+
+    /**
+     * get amount
+     * @return amount
+     */
+    public int getAmount() {
+        return amount;
+    }
+
     /**
      *  amount of one money transaction
      */
@@ -134,5 +143,21 @@ public class Bank implements BankBase {
      */
     public int getTransactionCounter() {
         return transactionCounter;
+    }
+
+    /**
+     * get account1
+     * @return account1 instance
+     */
+    public Account getAccount1() {
+        return account1;
+    }
+
+    /**
+     * get account2
+     * @return account2 instance
+     */
+    public Account getAccount2() {
+        return account2;
     }
 }
