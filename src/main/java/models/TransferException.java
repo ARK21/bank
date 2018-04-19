@@ -5,6 +5,10 @@ package models;
  */
 public class TransferException extends Exception {
 
+    /**
+     * Constructor
+     * @param message
+     */
     public TransferException(String message) {
         super(message);
     }
