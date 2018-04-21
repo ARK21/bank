@@ -13,4 +13,5 @@ Enter the following commands in console
 - git clone git@github.com:ARK21/bank.git
 - cd bank
 - mvn install
+- cd target
 - java -jar Bank-1.0.jar
