@@ -14,4 +14,4 @@ Enter the following commands in console
 - cd bank
 - mvn install
 - cd target
-- java -jar Bank-1.0.jar
+- java -jar Bank.jar
