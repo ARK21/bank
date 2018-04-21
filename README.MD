@@ -15,3 +15,12 @@ Enter the following commands in console
 - mvn install
 - cd target
 - java -jar Bank.jar
+
+Used technologies and libraries
+===================================
+- Java 9.0.4 
+- job4j 1.2.17
+- JUnit 4
+- Maven 3.3.9
+- Git
+
