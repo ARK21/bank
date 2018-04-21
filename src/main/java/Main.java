@@ -13,7 +13,6 @@ public class Main {
     private static final Logger log = Logger.getLogger(Main.class);
 
     public static void main(String[] args) {
-
         Bank bank = new Bank();
         // initialize 2 thread and start
         TransferThread threadOne = new TransferThread("Thread #1", bank);
@@ -33,6 +32,6 @@ public class Main {
             // if already was interrupted
             log.error("Application exception", e);
         }
-        log.info("Total transaction: " + bank.getTransactionCounter());
+        log.info("The application terminates because total transaction = " + bank.getTransactionCounter());
     }
 }
