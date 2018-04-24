@@ -27,7 +27,7 @@ public class Main {
             log.error("Application exception", e);
         }
         try {
-            threadOne.join();
+            threadTwo.join();
         } catch (InterruptedException e) {
             // if already was interrupted
             log.error("Application exception", e);

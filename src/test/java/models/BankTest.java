@@ -12,7 +12,6 @@ public class BankTest {
     @Test
     public void isTransferWorksCorrect() {
         Bank bank = new Bank();
-        bank.generateSum();
         bank.transfer();
         // check if account money get more or less on generated sum
         assertTrue(bank.getAccount1().getMoney() == 10000 + bank.getAmount() ||

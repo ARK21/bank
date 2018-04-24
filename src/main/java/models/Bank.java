@@ -1,6 +1,7 @@
 package models;
 
 import java.util.concurrent.ThreadLocalRandom;
+
 import org.apache.log4j.Logger;
 
 /**
@@ -20,6 +21,7 @@ public class Bank implements BankBase {
 
     /**
      * get amount
+     *
      * @return amount
      */
     public int getAmount() {
@@ -27,7 +29,7 @@ public class Bank implements BankBase {
     }
 
     /**
-     *  amount of one money transaction
+     * amount of one money transaction
      */
     private int amount;
     /**
@@ -52,6 +54,7 @@ public class Bank implements BankBase {
      */
     public synchronized void transfer() {
         if (transactionCounter < 30) {
+            generateSum();
             // number to choose case 1 or case 2.
             int number = generateNumber();
             switch (number) {
@@ -107,6 +110,7 @@ public class Bank implements BankBase {
 
     /**
      * Check is enough money for transfer
+     *
      * @param out account instance
      * @return true if enough
      */
@@ -117,12 +121,13 @@ public class Bank implements BankBase {
     /**
      * Generate amount to transfer
      */
-    public void generateSum() {
+    private synchronized void generateSum() {
         this.amount = ThreadLocalRandom.current().nextInt(1, 10000 + 1);
     }
 
     /**
      * Generate 1 or 2. To choose between two switchers
+     *
      * @return number
      */
     private int generateNumber() {
@@ -131,6 +136,7 @@ public class Bank implements BankBase {
 
     /**
      * Check if bank works
+     *
      * @return
      */
     public boolean isWork() {
@@ -139,6 +145,7 @@ public class Bank implements BankBase {
 
     /**
      * get transactionCounter
+     *
      * @return number ot counter
      */
     public int getTransactionCounter() {
@@ -147,6 +154,7 @@ public class Bank implements BankBase {
 
     /**
      * get account1
+     *
      * @return account1 instance
      */
     public Account getAccount1() {
@@ -155,6 +163,7 @@ public class Bank implements BankBase {
 
     /**
      * get account2
+     *
      * @return account2 instance
      */
     public Account getAccount2() {

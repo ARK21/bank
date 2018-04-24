@@ -42,8 +42,7 @@ public class TransferThread extends Thread {
                log.error("Application exception", e);
             }
             // generate transfer amount
-            bank.generateSum();
-            bank.transfer();
+           bank.transfer();
         }
     }
 
